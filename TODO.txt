@@ -1,0 +1,9 @@
+- Leave game (surrender seat)
+- Twitch-style participant count
+- Put colored hex icon next to each player's name
+- Allow player name editing (save to local storage and auto-use it when joining other games)
+- Add player presence indicator (connected, joined, disconnected, left)
+- Make it clear whose turn it is
+- Highlight each player's last move
+- Win screen
+- Have a "Create this Game" button on games that don't exist yet e.g. foo.com/not-exist

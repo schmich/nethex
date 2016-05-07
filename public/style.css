@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  height: 100%;
+}
+form {
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  margin-top: 300px;
+}
+#slug {
+  font-weight: 200;
+  font-size: 30px;
+  border: 0;
+  border-bottom: 1px solid #777;
+  text-align: center;
+  outline: none;
+  width: 50%;
+  max-width: 350px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+#start-game {
+  padding: 20px;
+  font-size: 24px;
+  background: #77e;
+  display: inline-block;
+  font-weight: 200;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background;
+  -webkit-transition: background;
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+}
+#start-game:hover {
+  background: #e77;
+}
+.join-game {
+  outline: 0;
+  padding: 10px 25px;
+  margin: 0 20px;
+  font-size: 20px;
+  background: transparent;
+  display: inline-block;
+  font-weight: 300;
+  border: 0;
+  color: #1c1;
+  border: 2px solid #1c1;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background, color, border-color;
+  -webkit-transition: background, color, border-color;
+  transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+}
+.join-game:hover {
+  background: #1c1;
+  border: 2px solid #1c1;
+  color: #fff;
+}
+.section {
+  margin-bottom: 20px;
+}
+.hex .tile {
+  stroke: #ddd;
+  stroke-width: 1;
+  fill-opacity: 1;
+  fill: #ddd;
+  transition: transform, fill-opacity, stroke-width, fill, stroke;
+  -webkit-transition: transform, fill-opacity, stroke-width, fill, stroke;
+  transition-duration: 0.1s;
+  -webkit-transition-duration: 0.1s;
+}
+.board.active .hex:hover {
+  cursor: pointer;
+}
+.board.active .hex.one:hover,
+.board.active .hex.two:hover {
+  cursor: default;
+}
+.board.active.one .hex:not(.one):not(.two):hover .tile {
+  stroke: #e77;
+  fill: #e77;
+}
+.board.active.two .hex:not(.one):not(.two):hover .tile {
+  stroke: #77e;
+  fill: #77e;
+}
+.hex.one .tile {
+  stroke: #e77;
+  fill: #e77;
+}
+.hex.two .tile {
+  stroke: #77e;
+  fill: #77e;
+}
+.hex.ghost .tile {
+  fill: #bbb;
+}
+.hex.ghost.one .tile {
+  stroke: #c55;
+  fill: #c55;
+}
+.hex.ghost.two .tile {
+  stroke: #55c;
+  fill: #55c;
+}
+.board .row {
+  position: relative;
+}
+#template {
+  display: none;
+}
+/*
+.container:before {
+  content:'';
+  float: left;
+  height: 100%;
+}
+.container {
+  height: 100%;
+}
+#foo {
+  background: yellow;
+}
+#foo:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+#board {
+  float: left;
+}*/
+#board-container {
+  height: 100vh;
+  padding: 100px 50px 40px 50px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+.scoreboard {
+  margin: 0 30px;
+  font-weight: 200;
+  font-size: 30px;
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  position: relative;
+}
+.player {
+  display: flex;
+  align-items: center;
+}
+.player:last-of-type {
+  text-align: right;
+}
+.name {
+  margin: 25px 0;
+}

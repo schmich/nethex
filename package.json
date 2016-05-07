@@ -1,0 +1,27 @@
+{
+  "name": "nethex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schmich/nethex"
+  },
+  "author": "Chris Schmich <schmch@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schmich/nethex/issues"
+  },
+  "homepage": "https://github.com/schmich/nethex",
+  "dependencies": {
+    "adj-noun": "^0.1.1",
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "mongodb": "^2.1.16",
+    "socket.io": "^1.4.5"
+  }
+}
