@@ -78,6 +78,8 @@ io.on('connection', function(socket) {
     var slug = e.slug;
     var token = e.token;
     getGame(slug, token, function(err, game) {
+      var winner = findWinner(game.board);
+      game.winner = winner;
       socket.emit('game:loaded', game);
     });
 
@@ -243,7 +245,7 @@ function findVerticalWinner(board) {
     marks[0][col] = true;
   }
 
-  return doFindWinner(board, queue, marks, 0, function(row, col) {
+  return doFindWinner(board, queue, marks, 1, function(row, col) {
     return row === board.length - 1;
   });
 }
@@ -257,7 +259,7 @@ function findHorizontalWinner(board) {
     marks[row][0] = true;
   }
 
-  return doFindWinner(board, queue, marks, 1, function(row, col) {
+  return doFindWinner(board, queue, marks, 0, function(row, col) {
     return col === board[0].length - 1;
   });
 }
