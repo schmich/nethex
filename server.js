@@ -109,7 +109,7 @@ io.on('connection', function(socket) {
   });
 });
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 
 app.post('/api/games', function(req, res) {
