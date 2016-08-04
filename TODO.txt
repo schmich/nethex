@@ -1,3 +1,10 @@
+Infrastructure
+- Rewrite server in Go
+- Port adj-noun to Go
+- Use vuejs on front-end
+- Port front-end to ES2017, use gulp
+
+Features
 - Leave game (surrender seat)
 - Twitch-style participant count
 - Put colored hex icon next to each player's name

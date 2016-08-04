@@ -11,7 +11,7 @@ RUN apk add bash
 RUN apk add supervisor
 RUN apk add mongodb
 RUN mkdir -p /srv/nethex/db
-RUN mkdir -p /srv/nethex/www
+RUN mkdir -p /srv/nethex/web
 COPY bashrc /root/.bashrc
 COPY supervisord.conf /etc/supervisord.conf
 COPY run.sh /root/run.sh
